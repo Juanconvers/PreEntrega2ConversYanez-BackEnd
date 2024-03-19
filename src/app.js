@@ -23,6 +23,28 @@ mongoose.connect("mongodb+srv://juanconverslegal:Malkut27.7@cluster0.j6k2srb.mon
     .then(() => console.log("DB is connected"))
     .catch(e => console.log(e))
 
+
+    await orderModel.insertMany([
+        { title: "Avena", description: "El mejor", category: "Producto no perecedero", status: true, stock: 65, code: "AV2", price: 1500, thumbnail: [] },
+        { title: "Platano", description: "El mejor", category: "Producto perecedero", status: true, stock: 16, code: "BV6", price: 450, thumbnail: [] },
+        { title: "Blanquador", description: "El mejor", category: "Producto de aseo", status: true, stock: 85, code: "CV7", price: 1250, thumbnail: [] },
+        { title: "Harina de maiz", description: "El mejor", category: "Producto no perecedero", status: true, stock: 33, code: "AV3", price: 1970, thumbnail: [] },
+        { title: "Banano", description: "El mejor", category: "Producto perecedero", status: true, stock: 150, code: "BV12", price: 750, thumbnail: [] },
+        { title: "Jabón azul", description: "Calidad superior", category: "Producto de aseo", status: true, stock: 17, code: "CV3", price: 2500, thumbnail: [] },
+        { title: "Arroz", description: "Excelente condición", category: "Producto no perecedero", status: true, stock: 75, code: "AV5", price: 3500, thumbnail: [] },
+        { title: "Manzana", description: "Perfecta condición", category: "Producto perecedero", status: true, stock: 100, code: "BV5", price: 350, thumbnail: [] },
+        { title: "Limpiador multiusos", description: "Perfecta condición", category: "Producto de aseo", status: true, stock: 32, code: "CV6", price: 1000, thumbnail: [] },
+        { title: "Garbanzo", description: "Calidad superior", category: "Producto no perecedero", status: true, stock: 27, code: "AV10", price: 975, thumbnail: [] },
+        { title: "Aceituna", description: "Calidad superior", category: "Producto no perecedero", status: true, stock: 45, code: "AV11", price: 4500, thumbnail: [] },
+        { title: "Jabón detergente", description: "Excelente condición", category: "Producto de aseo", status: true, stock: 18, code: "CV45", price: 3200, thumbnail: [] },
+        { title: "Lechuga", description: "Excelente condición", category: "Producto perecedero", status: true, stock: 20, code: "BV8", price: 1300, thumbnail: [] },
+        { title: "Zanahoria", description: "Perfecta condición", category: "Producto perecedero", status: true, stock: 75, code: "BV10", price: 500, thumbnail: [] },
+        { title: "Cepillo para el piso", description: "Perfecta condición", category: "Producto de aseo", status: true, stock: 6, code: "CV2", price: 1550, thumbnail: [] },
+    ])
+
+
+
+
 //Middlewares
 app.use(express.json())
 app.engine('handlebars', engine())
