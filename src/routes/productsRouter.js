@@ -2,8 +2,6 @@
 import { Router } from "express";
 import productModel from "../models/products.js";
 
-
-
 const productsRouter = Router()
 
 productsRouter.get('/', async (req, res) => {
@@ -46,9 +44,7 @@ productsRouter.get('/:pid', async (req, res) => {
             }
     }catch(error){
         res.status(500).send(`Error interno del servidor - Consulta producto: ${error}`)
-    }
-    
-})
+    }})
 
 productsRouter.post('/', async (req, res) => {
     try{

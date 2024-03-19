@@ -9,10 +9,12 @@
 
     <div class="col">
         <div class="card form-control" style="width: 18rem;">
-            <img src="{{this.img}}" alt="Imagen de {{this.title}}" class="card-img-top">
+            <img src="{{this.thumbnail}}" alt="Imagen de {{this.title}}" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">Categoría: {{this.category}} </p>
                 <p class="card-text">Descripción: {{this.description}} </p>
+                <p class="card-text">Estado: {{this.status}} </p>
                 <p class="card-text">En bodega: {{this.stock}} </p>
                 <p class="card-text">Código: {{this.code}} </p>
                 <p class="card-text">Precio: {{this.price}} </p>
